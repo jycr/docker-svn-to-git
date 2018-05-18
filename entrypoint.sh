@@ -70,6 +70,9 @@ function stage_extractAuthors() {
         |  sort -u \
         > "$RESULT_FILE"
 	log "Please check file '$RESULT_FILE', modify '$SVN_AUTHORS' if needed, and relaunch"
+	echo "<extracted-authors>"
+	cat "$RESULT_FILE"
+	echo "</extracted-authors>"
 }
 
 function stage_importSvnIntoGit() {
